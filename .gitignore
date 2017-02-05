@@ -1,0 +1,29 @@
+# file suggestions per http://stackoverflow.com/questions/16736856/what-should-be-in-my-gitignore-for-an-android-studio-project
+
+# built application files
+*.apk
+*.ap_
+
+# files for the dex VM
+*.dex
+
+# Java class files
+*.class
+
+# generated files
+bin/
+gen/
+
+# Local configuration file (sdk path etc.)
+local.properties
+
+# Windos thumbnail db
+Thumbs.db
+
+# Android Studio
+*.iml
+.gradle
+.idea
+build/
+/captures
+.externalNativeBuild
