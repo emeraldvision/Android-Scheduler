@@ -14,12 +14,10 @@ public class CalendarActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_calendar);
-    }
 
-    @Override
-    protected void onResume() {
-        super.onResume();
+        setContentView(R.layout.activity_calendar);
+
+        // add labels to each hour's view
         setTextOnView(R.id.time_0, R.string.time_0);
         setTextOnView(R.id.time_1, R.string.time_1);
         setTextOnView(R.id.time_2, R.string.time_2);
@@ -45,7 +43,7 @@ public class CalendarActivity extends AppCompatActivity {
         setTextOnView(R.id.time_22, R.string.time_22);
         setTextOnView(R.id.time_23, R.string.time_23);
 
-//        add single sample task
+        // add single sample task
         RelativeLayout relativeLayout;
         relativeLayout = (RelativeLayout)findViewById(R.id.day);
         View task = new View(this);
@@ -55,10 +53,12 @@ public class CalendarActivity extends AppCompatActivity {
                 RelativeLayout.LayoutParams.WRAP_CONTENT);
         taskParams.addRule(RelativeLayout.ALIGN_TOP, R.id.time_1);
         taskParams.addRule(RelativeLayout.ABOVE, R.id.time_23);
-        taskParams.setMargins(getResources().getDimensionPixelSize(R.dimen.hour_width), 0, 0, 0);
+        taskParams.setMargins(getResources().getDimensionPixelSize(R.dimen.hour_width),
+                getResources().getDimensionPixelSize(R.dimen.line_height), 0, 0);
         task.setLayoutParams(taskParams);
         relativeLayout.addView(task);
     }
+
 
 //    add time to display
     private void setTextOnView(int viewID, int stringID) {
