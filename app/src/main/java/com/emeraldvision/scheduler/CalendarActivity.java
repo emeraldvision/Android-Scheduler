@@ -9,6 +9,8 @@ import android.widget.TextView;
 
 public class CalendarActivity extends AppCompatActivity {
 
+    private Calendar myCalendar;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -43,15 +45,17 @@ public class CalendarActivity extends AppCompatActivity {
         setTextOnView(R.id.time_22, R.string.time_22);
         setTextOnView(R.id.time_23, R.string.time_23);
 
+//        add single sample task
         RelativeLayout relativeLayout;
         relativeLayout = (RelativeLayout)findViewById(R.id.day);
         View task = new View(this);
         task.setBackgroundColor(getResources().getColor(R.color.colorAccent));
         RelativeLayout.LayoutParams taskParams = new RelativeLayout.LayoutParams(
-                100,
+                RelativeLayout.LayoutParams.WRAP_CONTENT,
                 RelativeLayout.LayoutParams.WRAP_CONTENT);
         taskParams.addRule(RelativeLayout.ALIGN_TOP, R.id.time_1);
-        taskParams.addRule(RelativeLayout.ABOVE, R.id.time_2);
+        taskParams.addRule(RelativeLayout.ABOVE, R.id.time_23);
+        taskParams.setMargins(getResources().getDimensionPixelSize(R.dimen.hour_width), 0, 0, 0);
         task.setLayoutParams(taskParams);
         relativeLayout.addView(task);
     }
