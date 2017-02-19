@@ -6,6 +6,8 @@ import android.view.View;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
+import org.joda.time.DateTime;
+
 import java.util.Arrays;
 import java.util.List;
 
@@ -29,20 +31,29 @@ public class CalendarActivity extends AppCompatActivity {
             setTextOnView(timeList.get(i), i + ":00");
         }
 
-        // add single sample task
+        // create sample event
+        DateTime startTime = new DateTime(2017, 9, 7, 3, 54);
+        DateTime endTime = new DateTime(2017, 9, 7, 12, 00);
+        Event sampleEvent = new Event("sample", startTime, endTime);
+
+        // add single sample event
+        addEventToView(timeList, sampleEvent);
+    }
+
+    private void addEventToView(List<Integer> timeList, Event event) {
         RelativeLayout relativeLayout;
         relativeLayout = (RelativeLayout) findViewById(R.id.day);
-        View task = new View(this);
-        task.setBackgroundColor(getResources().getColor(R.color.colorAccent));
-        RelativeLayout.LayoutParams taskParams = new RelativeLayout.LayoutParams(
+        View eventView = new View(this);
+        eventView.setBackgroundColor(getResources().getColor(R.color.colorAccent));
+        RelativeLayout.LayoutParams eventParams = new RelativeLayout.LayoutParams(
                 RelativeLayout.LayoutParams.WRAP_CONTENT,
                 RelativeLayout.LayoutParams.WRAP_CONTENT);
-        taskParams.addRule(RelativeLayout.ALIGN_TOP, R.id.time_0);
-        taskParams.addRule(RelativeLayout.ABOVE, R.id.time_24);
-        taskParams.setMargins(getResources().getDimensionPixelSize(R.dimen.hour_width),
+        eventParams.addRule(RelativeLayout.ALIGN_TOP, timeList.get(event.getStartHour()));
+        eventParams.addRule(RelativeLayout.ABOVE, timeList.get(event.getEndHour()));
+        eventParams.setMargins(getResources().getDimensionPixelSize(R.dimen.hour_width),
                 getResources().getDimensionPixelSize(R.dimen.line_height), 0, 0);
-        task.setLayoutParams(taskParams);
-        relativeLayout.addView(task);
+        eventView.setLayoutParams(eventParams);
+        relativeLayout.addView(eventView);
     }
 
 

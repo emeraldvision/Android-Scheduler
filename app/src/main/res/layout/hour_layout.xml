@@ -7,10 +7,11 @@
         android:id="@+id/time"
         android:layout_width="@dimen/hour_width"
         android:layout_height="@dimen/hour_height" />
+
     <View
         android:layout_width="match_parent"
         android:layout_height="@dimen/line_height"
-        android:background="@color/colorPrimaryDark"
-        android:layout_alignTop="@id/time"/>
+        android:layout_alignTop="@id/time"
+        android:background="@color/colorPrimaryDark" />
 
 </RelativeLayout>
