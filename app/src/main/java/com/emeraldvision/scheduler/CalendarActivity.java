@@ -1,5 +1,7 @@
 package com.emeraldvision.scheduler;
 
+import android.content.Intent;
+import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -31,6 +33,15 @@ public class CalendarActivity extends AppCompatActivity {
             setTextOnView(timeList.get(i), i + ":00");
         }
 
+        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
+        fab.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(CalendarActivity.this, NewEventActivity.class);
+                startActivity(intent);
+            }
+        });
+
         // create sample event
         DateTime startTime = new DateTime(2017, 9, 7, 3, 54);
         DateTime endTime = new DateTime(2017, 9, 7, 12, 00);
@@ -44,7 +55,7 @@ public class CalendarActivity extends AppCompatActivity {
         RelativeLayout relativeLayout;
         relativeLayout = (RelativeLayout) findViewById(R.id.day);
         View eventView = new View(this);
-        eventView.setBackgroundColor(getResources().getColor(R.color.colorAccent));
+        eventView.setBackgroundColor(getResources().getColor(R.color.colorEvent));
         RelativeLayout.LayoutParams eventParams = new RelativeLayout.LayoutParams(
                 RelativeLayout.LayoutParams.WRAP_CONTENT,
                 RelativeLayout.LayoutParams.WRAP_CONTENT);
