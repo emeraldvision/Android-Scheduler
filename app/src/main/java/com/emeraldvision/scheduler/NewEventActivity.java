@@ -10,6 +10,9 @@ public class NewEventActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_new_event);
+        ActionBar titleBar = getSupportActionBar();
+        if (titleBar != null) {
+            titleBar.setTitle("Add Event");
         }
     }
 }
