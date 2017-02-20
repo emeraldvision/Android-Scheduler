@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/day"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingBottom="@dimen/activity_vertical_margin"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingTop="@dimen/activity_vertical_margin">
+
+        <!--hours and their lines-->
+        <include
+            android:id="@+id/time_0"
+            layout="@layout/hour_layout" />
+
+        <include
+            android:id="@+id/time_1"
+            layout="@layout/hour_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/time_0" />
+
+        <include
+            android:id="@+id/time_2"
+            layout="@layout/hour_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/time_1" />
+
+        <include
+            android:id="@+id/time_3"
+            layout="@layout/hour_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/time_2" />
+
+        <include
+            android:id="@+id/time_4"
+            layout="@layout/hour_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/time_3" />
+
+        <include
+            android:id="@+id/time_5"
+            layout="@layout/hour_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/time_4" />
+
+        <include
+            android:id="@+id/time_6"
+            layout="@layout/hour_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/time_5" />
+
+        <include
+            android:id="@+id/time_7"
+            layout="@layout/hour_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/time_6" />
+
+        <include
+            android:id="@+id/time_8"
+            layout="@layout/hour_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/time_7" />
+
+        <include
+            android:id="@+id/time_9"
+            layout="@layout/hour_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/time_8" />
+
+        <include
+            android:id="@+id/time_10"
+            layout="@layout/hour_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/time_9" />
+
+        <include
+            android:id="@+id/time_11"
+            layout="@layout/hour_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/time_10" />
+
+        <include
+            android:id="@+id/time_12"
+            layout="@layout/hour_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/time_11" />
+
+        <include
+            android:id="@+id/time_13"
+            layout="@layout/hour_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/time_12" />
+
+        <include
+            android:id="@+id/time_14"
+            layout="@layout/hour_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/time_13" />
+
+        <include
+            android:id="@+id/time_15"
+            layout="@layout/hour_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/time_14" />
+
+        <include
+            android:id="@+id/time_16"
+            layout="@layout/hour_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/time_15" />
+
+        <include
+            android:id="@+id/time_17"
+            layout="@layout/hour_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/time_16" />
+
+        <include
+            android:id="@+id/time_18"
+            layout="@layout/hour_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/time_17" />
+
+        <include
+            android:id="@+id/time_19"
+            layout="@layout/hour_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/time_18" />
+
+        <include
+            android:id="@+id/time_20"
+            layout="@layout/hour_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/time_19" />
+
+        <include
+            android:id="@+id/time_21"
+            layout="@layout/hour_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/time_20" />
+
+        <include
+            android:id="@+id/time_22"
+            layout="@layout/hour_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/time_21" />
+
+        <include
+            android:id="@+id/time_23"
+            layout="@layout/hour_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/time_22" />
+
+        <include
+            android:id="@+id/time_24"
+            layout="@layout/hour_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/time_23" />
+
+    </RelativeLayout>
+</ScrollView>
