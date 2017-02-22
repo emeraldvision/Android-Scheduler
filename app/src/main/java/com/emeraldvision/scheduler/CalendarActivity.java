@@ -33,6 +33,7 @@ public class CalendarActivity extends AppCompatActivity {
             setTextOnView(timeList.get(i), i + ":00");
         }
 
+        // new event button
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override

@@ -15,20 +15,63 @@
         android:layout_height="match_parent"
         android:orientation="vertical">
 
+        <!--name entry field-->
         <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="@string/event" />
+            android:hint="@string/event"
+            android:textSize="@dimen/edit_event_name_size" />
 
+        <!--date field-->
         <TextView
+            android:id="@+id/new_event_date"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/date" />
+            android:textSize="@dimen/edit_event_date_size" />
 
-        <TextView
+        <!--start time field-->
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/start" />
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/start"
+                android:textSize="@dimen/edit_event_time_size" />
+
+            <TextView
+                android:id="@+id/start_time"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:textSize="@dimen/edit_event_time_size" />
+
+        </LinearLayout>
+
+        <!--end time field-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/end"
+                android:textSize="@dimen/edit_event_time_size" />
+
+            <TextView
+                android:id="@+id/end_time"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:textSize="@dimen/edit_event_time_size" />
+
+        </LinearLayout>
 
 
     </LinearLayout>
