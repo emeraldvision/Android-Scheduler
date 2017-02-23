@@ -24,7 +24,7 @@ public class DatePickerFragment extends DialogFragment
 
     @Override
     public Dialog onCreateDialog(Bundle savedInstanceState) {
-        // Use the current date as the default date in the picker
+        // Use the display date as the default date in the picker
         DateTime d = new DateTime(longDate);
         int year = d.getYear();
         int month = d.getMonthOfYear() - 1;  // jodatime uses 1-12 while Android uses 0-11
@@ -34,6 +34,7 @@ public class DatePickerFragment extends DialogFragment
         return new DatePickerDialog(getActivity(), this, year, month, day);
     }
 
+    @Override
     public void onDateSet(DatePicker view, int year, int month, int day) {
         // Listen for date choice
         listener.onDateSet(view, year, month + 1, day);   // jodatime uses 1-12 while Android uses 0-11

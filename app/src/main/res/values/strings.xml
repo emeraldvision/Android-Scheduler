@@ -4,4 +4,5 @@
     <string name="start">Start</string>
     <string name="end">End</string>
     <string name="datePicker">datePicker</string>
+    <string name="timePicker">\"timePicker\"</string>
 </resources>
