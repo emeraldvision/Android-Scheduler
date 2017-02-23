@@ -17,6 +17,7 @@
 
         <!--name entry field-->
         <EditText
+            android:id="@+id/event_name"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="@string/event"
@@ -24,7 +25,7 @@
 
         <!--date field-->
         <TextView
-            android:id="@+id/new_event_date"
+            android:id="@+id/event_date"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textSize="@dimen/edit_event_date_size" />
@@ -75,5 +76,14 @@
 
 
     </LinearLayout>
+
+    <Button
+        android:id="@+id/saveButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="@dimen/save_button_margin"
+        android:text="@string/buttonText" />
 
 </RelativeLayout>

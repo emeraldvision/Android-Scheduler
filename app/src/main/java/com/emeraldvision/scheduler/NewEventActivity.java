@@ -6,7 +6,10 @@ import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.view.inputmethod.EditorInfo;
+import android.widget.Button;
 import android.widget.DatePicker;
+import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.TimePicker;
 
@@ -39,6 +42,15 @@ public class NewEventActivity extends AppCompatActivity {
         setupDateView();
         setupStartTimeView(start_time);
         setupEndTimeView(end_time);
+        Button saveButton = (Button) findViewById(R.id.saveButton);
+        saveButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Event event = new Event(((EditText) findViewById(R.id.event_name)).getText().toString(), start, end);
+                EventStorage.getInstance().addEvent(event);
+                NewEventActivity.this.finish();
+            }
+        });
     }
 
     private void setupStartTimeView(int timeID) {
@@ -80,18 +92,17 @@ public class NewEventActivity extends AppCompatActivity {
     }
 
     private int displayDate() {
-        int dateID = R.id.new_event_date;
+        int dateID = R.id.event_date;
         String dateString = start.toString(DateTimeFormat.longDate());
         setTextOnView(dateID, dateString);
         return dateID;
     }
 
-    // add time to display
+    // add text to activity's view
     private void setTextOnView(int viewID, String stringID) {
         ((TextView) findViewById(viewID)).setText(stringID);
     }
 
-    // show date picker
     private void showDatePickerDialog(long longTime) {
         DatePickerFragment dateFragment = new DatePickerFragment();
         Bundle arguments = new Bundle();
@@ -107,7 +118,6 @@ public class NewEventActivity extends AppCompatActivity {
         });
     }
 
-    // show start time picker
     private void showStartTimePickerDialog(long longTime) {
         TimePickerFragment timeFragment = new TimePickerFragment();
         Bundle arguments = new Bundle();
@@ -123,7 +133,6 @@ public class NewEventActivity extends AppCompatActivity {
         });
     }
 
-    // show end time picker
     private void showEndTimePickerDialog(long longTime) {
         TimePickerFragment timeFragment = new TimePickerFragment();
         Bundle arguments = new Bundle();
@@ -138,5 +147,7 @@ public class NewEventActivity extends AppCompatActivity {
             }
         });
     }
+
+    //
 
 }
